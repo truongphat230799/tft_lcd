@@ -1,0 +1,14 @@
+{
+    "name": "TFT LCD",
+    "description": "Mục mở rộng của Yolo:Bit dùng cho màn hình TFT",
+    "libs": [
+        "tft_lcd.py", "glcdfont.py", "tt14.py", "tt24.py", "tt32.py"
+    ],
+    "blocks": [
+        "definition.js"
+    ],
+    "toolbox": "toolbox.xml",
+    "languages": {
+    },
+    "poster": "poster.png"
+}
