@@ -11,6 +11,11 @@
           <field name="NUM">0</field>
         </shadow>
       </value>
+      <value name="rotation">
+        <shadow type="math_number">
+          <field name="NUM">0</field>
+        </shadow>
+      </value>
     </block>
     <block type="tft_lcd_print">
       <value name="text">
