@@ -3,7 +3,7 @@ Blockly.Blocks['tft_lcd_create'] = {
       this.jsonInit(
         {
             "type": "tft_lcd_create",
-            "message0": "khởi tạo màn hình TFT chân MISO %1 chân MOSI %2 chân SCK %3 chân CS %4 chân DC %5 chân RST %6 độ rộng %7 %8 chiều cao %9 %10",
+            "message0": "khởi tạo màn hình TFT chân MISO %1 chân MOSI %2 chân SCK %3 chân CS %4 chân DC %5 chân RST %6 độ rộng %8 %7 chiều cao %10 %9",
             "args0": [
               {
                 "type": "field_dropdown",
@@ -517,7 +517,7 @@ Blockly.Blocks['tft_lcd_print'] = {
         this.jsonInit(
             {
                 "type": "tft_lcd_print",
-                "message0": "hiện lên TFT LCD  %1%2 tại x %3%4 y %5%6 font chữ %7",
+                "message0": "hiện lên TFT LCD  %2%1 tại x %4%3 y %6%5 font chữ %7",
                 "args0": [
                   {
                         type: "input_dummy",
@@ -589,7 +589,7 @@ Blockly.Blocks['tft_lcd_draw'] = {
         this.jsonInit(
             {
                 "type": "tft_lcd_draw",
-                "message0": "vẽ  %1 dài %2%3 rộng %4%5 tại x %6%7 y %8%9 tỉ lệ màu R %10%11 G %12%13 B %14%15",
+                "message0": "vẽ  %1 dài %3%2 rộng %5%4 tại x %7%6 y %9%8 tỉ lệ màu R %11%10 G %13%12 B %15%14",
                 "args0": [
                   {
                     "type": "field_dropdown",
@@ -708,7 +708,7 @@ Blockly.Blocks['tft_lcd_draw_text'] = {
         this.jsonInit(
             {
                 "type": "tft_lcd_draw_text",
-                "message0": "hiện lên TFT LCD  %1%2 tại x %3%4 y %5%6 màu R %7%8 G %9%10 B %11%12",
+                "message0": "hiện lên TFT LCD  %2%1 tại x %4%3 y %6%5 màu R %8%7 G %10%9 B %12%11",
                 "args0": [
                   {
                     type: "input_dummy",
