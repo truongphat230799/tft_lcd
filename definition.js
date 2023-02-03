@@ -517,7 +517,7 @@ Blockly.Blocks['tft_lcd_print'] = {
         this.jsonInit(
             {
                 "type": "tft_lcd_print",
-                "message0": "hiện lên TFT LCD  %2%1 tại x %4%3 y %6%5 font chữ %7",
+                "message0": "hiện lên TFT LCD %1%2 tại x %3%4 y %5%6 font chữ %7",
                 "args0": [
                   {
                     "type": "input_dummy",
