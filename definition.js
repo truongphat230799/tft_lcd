@@ -3,7 +3,7 @@ Blockly.Blocks['tft_lcd_create'] = {
       this.jsonInit(
         {
             "type": "tft_lcd_create",
-            "message0": "khởi tạo màn hình TFT chân MISO %1 chân MOSI %2 chân SCK %3 chân CS %4 chân DC %5 chân RST %6 độ rộng %8 %7 chiều cao %10 %9",
+            "message0": "khởi tạo màn hình TFT chân MISO %1 chân MOSI %2 chân SCK %3 chân CS %4 chân DC %5 chân RST %6 độ rộng %8 %7 chiều cao %10 %9 hướng %12%11",
             "args0": [
               {
                 "type": "field_dropdown",
@@ -464,6 +464,14 @@ Blockly.Blocks['tft_lcd_create'] = {
                 "type": "input_value",
                 "name": "high",
                 "value": 320
+              },
+              {
+                "type": "input_dummy",
+              },
+              {
+                "type": "input_value",
+                "name": "rotation",
+                "value": 0
               }
             ],
             "previousStatement": null,
@@ -490,10 +498,11 @@ Blockly.Blocks['tft_lcd_create'] = {
         var cs_pin = block.getFieldValue('cs_pin');
         var dc_pin = block.getFieldValue('dc_pin');
         var rst_pin = block.getFieldValue('rst_pin');
-        var width = block.getFieldValue('width');
-        var high = block.getFieldValue('high');
+        var width = Blockly.Python.valueToCode(block, 'width', Blockly.Python.ORDER_ATOMIC);
+        var high = Blockly.Python.valueToCode(block, 'high', Blockly.Python.ORDER_ATOMIC);
+        var r = Blockly.Python.valueToCode(block, 'rotation', Blockly.Python.ORDER_ATOMIC);
         // TODO: Assemble Python into code variable.
-        var code = 'spi = SPI(2, baudrate=20000000, miso=Pin('+miso_pin+'.pin),mosi=Pin('+mosi_pin+'.pin), sck=Pin('+sck_pin+'.pin))\n'+ 'display = ILI9341(spi, cs=Pin('+cs_pin+'.pin), dc=Pin('+dc_pin+'.pin), rst=Pin('+rst_pin+'.pin), w='+width+', h='+high+', r=0)\n';
+        var code = 'spi = SPI(2, baudrate=20000000, miso=Pin('+miso_pin+'.pin),mosi=Pin('+mosi_pin+'.pin), sck=Pin('+sck_pin+'.pin))\n'+ 'display = ILI9341(spi, cs=Pin('+cs_pin+'.pin), dc=Pin('+dc_pin+'.pin), rst=Pin('+rst_pin+'.pin), w='+width+', h='+high+', r='+r+')\n';
         return code;
     };
 
@@ -583,9 +592,9 @@ Blockly.Blocks['tft_lcd_print'] = {
             }
 };
 Blockly.Python['tft_lcd_print'] = function(block) {
-    var text = block.getFieldValue('text');
-    var x = block.getFieldValue('x');
-    var y = block.getFieldValue('y');
+    var text = Blockly.Python.valueToCode(block, 'text', Blockly.Python.ORDER_ATOMIC);
+    var x = Blockly.Python.valueToCode(block, 'x', Blockly.Python.ORDER_ATOMIC);
+    var y = Blockly.Python.valueToCode(block, 'y', Blockly.Python.ORDER_ATOMIC);
     var font = block.getFieldValue('font');
     // TODO: Assemble Python into code variable.
     var code = 'display.set_pos('+x+','+y+')\n' + 'display.set_font('+font+')\n' + 'display.print('+text+')\n';
@@ -697,14 +706,14 @@ Blockly.Blocks['tft_lcd_draw'] = {
             }
 };
 Blockly.Python['tft_lcd_draw'] = function(block) {
+    var w = Blockly.Python.valueToCode(block, 'w', Blockly.Python.ORDER_ATOMIC);
+    var h = Blockly.Python.valueToCode(block, 'h', Blockly.Python.ORDER_ATOMIC);
     var shape = block.getFieldValue('shape');
-    var w = block.getFieldValue('w');
-    var h = block.getFieldValue('h');
-    var x = block.getFieldValue('x');
-    var y = block.getFieldValue('y');
-    var r = block.getFieldValue('r');
-    var g = block.getFieldValue('g');
-    var b = block.getFieldValue('b');
+    var x = Blockly.Python.valueToCode(block, 'x', Blockly.Python.ORDER_ATOMIC);
+    var y = Blockly.Python.valueToCode(block, 'y', Blockly.Python.ORDER_ATOMIC);
+    var r = Blockly.Python.valueToCode(block, 'r', Blockly.Python.ORDER_ATOMIC);
+    var g = Blockly.Python.valueToCode(block, 'g', Blockly.Python.ORDER_ATOMIC);
+    var b = Blockly.Python.valueToCode(block, 'b', Blockly.Python.ORDER_ATOMIC);
     // TODO: Assemble Python into code variable.
     var code = 'display.' + shape+'('+x+','+y+','+w+','+h+', color565('+r+','+g+','+b+'))\n';
     return code;
@@ -777,12 +786,12 @@ Blockly.Blocks['tft_lcd_draw_text'] = {
 };
 
 Blockly.Python['tft_lcd_draw_text'] = function(block) {
-    var text = block.getFieldValue('text');
-    var x = block.getFieldValue('x');
-    var y = block.getFieldValue('y');
-    var r = block.getFieldValue('r');
-    var g = block.getFieldValue('g');
-    var b = block.getFieldValue('b');
+    var text = Blockly.Python.valueToCode(block, 'text', Blockly.Python.ORDER_ATOMIC);
+    var x = Blockly.Python.valueToCode(block, 'x', Blockly.Python.ORDER_ATOMIC);
+    var y = Blockly.Python.valueToCode(block, 'y', Blockly.Python.ORDER_ATOMIC);
+    var r = Blockly.Python.valueToCode(block, 'r', Blockly.Python.ORDER_ATOMIC);
+    var g = Blockly.Python.valueToCode(block, 'g', Blockly.Python.ORDER_ATOMIC);
+    var b = Blockly.Python.valueToCode(block, 'b', Blockly.Python.ORDER_ATOMIC);
     // TODO: Assemble Python into code variable.
     var code = 'display.draw_text8x8('+x+','+y+','+text+', color565('+r+','+g+','+b+'))\n';;
     return code;
