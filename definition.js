@@ -453,7 +453,7 @@ Blockly.Blocks['tft_lcd_create'] = {
                 "type": "input_dummy",
               },
               {
-                "type": "field_number",
+                "type": "input_value",
                 "name": "width",
                 "value": 240
               },
@@ -461,7 +461,7 @@ Blockly.Blocks['tft_lcd_create'] = {
                 "type": "input_dummy",
               },
               {
-                "type": "field_number",
+                "type": "input_value",
                 "name": "high",
                 "value": 320
               }
@@ -523,7 +523,7 @@ Blockly.Blocks['tft_lcd_print'] = {
                     "type": "input_dummy",
                   },
                   {
-                    "type": "field_input",
+                    "type": "input_value",
                     "name": "text",
                     "text": "thông tin"
                   },
@@ -531,7 +531,7 @@ Blockly.Blocks['tft_lcd_print'] = {
                     "type": "input_dummy",
                   },
                   {
-                    "type": "field_number",
+                    "type": "input_value",
                     "name": "x",
                     "value": 0
                   },
@@ -539,7 +539,7 @@ Blockly.Blocks['tft_lcd_print'] = {
                     "type": "input_dummy",
                   },
                   {
-                    "type": "field_number",
+                    "type": "input_value",
                     "name": "y",
                     "value": 0
                   },
@@ -621,7 +621,7 @@ Blockly.Blocks['tft_lcd_draw'] = {
                     "type": "input_dummy",
                   },
                   {
-                    "type": "field_number",
+                    "type": "input_value",
                     "name": "w",
                     "value": 0
                   },
@@ -629,7 +629,7 @@ Blockly.Blocks['tft_lcd_draw'] = {
                     "type": "input_dummy",
                   },
                   {
-                    "type": "field_number",
+                    "type": "input_value",
                     "name": "h",
                     "value": 0
                   },
@@ -637,7 +637,7 @@ Blockly.Blocks['tft_lcd_draw'] = {
                     "type": "input_dummy",
                   },
                   {
-                    "type": "field_number",
+                    "type": "input_value",
                     "name": "x",
                     "value": 0
                   },
@@ -645,7 +645,7 @@ Blockly.Blocks['tft_lcd_draw'] = {
                     "type": "input_dummy",
                   },
                   {
-                    "type": "field_number",
+                    "type": "input_value",
                     "name": "y",
                     "value": 0
                   },
@@ -653,7 +653,7 @@ Blockly.Blocks['tft_lcd_draw'] = {
                     "type": "input_dummy",
                   },
                   {
-                    "type": "field_number",
+                    "type": "input_value",
                     "name": "r",
                     "value": 0,
                     "min": 0,
@@ -663,7 +663,7 @@ Blockly.Blocks['tft_lcd_draw'] = {
                     "type": "input_dummy",
                   },
                   {
-                    "type": "field_number",
+                    "type": "input_value",
                     "name": "g",
                     "value": 0,
                     "min": 0,
@@ -673,7 +673,7 @@ Blockly.Blocks['tft_lcd_draw'] = {
                     "type": "input_dummy",
                   },
                   {
-                    "type": "field_number",
+                    "type": "input_value",
                     "name": "b",
                     "value": 0,
                     "min": 0,
@@ -714,7 +714,7 @@ Blockly.Blocks['tft_lcd_draw_text'] = {
                     "type": "input_dummy",
                   }, 
                   {
-                    "type": "field_input",
+                    "type": "input_value",
                     "name": "text",
                     "text": "thông tin"
                   },
@@ -722,7 +722,7 @@ Blockly.Blocks['tft_lcd_draw_text'] = {
                     "type": "input_dummy",
                   },
                   {
-                    "type": "field_number",
+                    "type": "input_value",
                     "name": "x",
                     "value": 0
                   },
@@ -730,7 +730,7 @@ Blockly.Blocks['tft_lcd_draw_text'] = {
                     "type": "input_dummy",
                   },
                   {
-                    "type": "field_number",
+                    "type": "input_value",
                     "name": "y",
                     "value": 0
                   },
@@ -738,7 +738,7 @@ Blockly.Blocks['tft_lcd_draw_text'] = {
                     "type": "input_dummy",
                   },
                   {
-                    "type": "field_number",
+                    "type": "input_value",
                     "name": "r",
                     "value": 0
                   },
@@ -746,7 +746,7 @@ Blockly.Blocks['tft_lcd_draw_text'] = {
                     "type": "input_dummy",
                   },
                   {
-                    "type": "field_number",
+                    "type": "input_value",
                     "name": "g",
                     "value": 0
                   },
@@ -754,7 +754,7 @@ Blockly.Blocks['tft_lcd_draw_text'] = {
                     "type": "input_dummy",
                   },
                   {
-                    "type": "field_number",
+                    "type": "input_value",
                     "name": "b",
                     "value": 0
                   }
