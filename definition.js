@@ -932,7 +932,7 @@ Blockly.Blocks['tft_lcd_draw_text_pickcolor'] = {
       this.jsonInit(
           {
               "type": "tft_lcd_draw_text_pickcolor",
-              "message0": "hiện lên TFT LCD  %2%1 tại x %4%3 y %6%5 màu %6%5",
+              "message0": "hiện lên TFT LCD  %2%1 tại x %4%3 y %6%5 màu %8%7",
               "args0": [
                 {
                   "type": "input_dummy",
