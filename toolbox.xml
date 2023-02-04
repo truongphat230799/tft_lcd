@@ -137,5 +137,12 @@
         </shadow>
       </value>
     </block>
+    <block type="tft_lcd_draw_text_pickcolor">
+      <value name="COLOR">
+        <shadow type="colour_picker">
+          <field name="COLOUR">#ff0000</field>
+        </shadow>
+      </value>
+    </block>
   </category>
 </xml>

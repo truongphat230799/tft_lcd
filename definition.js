@@ -927,3 +927,64 @@ Blockly.Python['tft_lcd_draw_line'] = function(block) {
   return code;
 };
 
+Blockly.Blocks['tft_lcd_draw_text_pickcolor'] = {
+  init: function () {
+      this.jsonInit(
+          {
+              "type": "tft_lcd_draw_text_pickcolor",
+              "message0": "hiện lên TFT LCD  %2%1 tại x %4%3 y %6%5 màu %6%5",
+              "args0": [
+                {
+                  "type": "input_dummy",
+                }, 
+                {
+                  "type": "input_value",
+                  "name": "text",
+                  "text": "thông tin"
+                },
+                {
+                  "type": "input_dummy",
+                },
+                {
+                  "type": "input_value",
+                  "name": "x",
+                  "value": 0
+                },
+                {
+                  "type": "input_dummy",
+                },
+                {
+                  "type": "input_value",
+                  "name": "y",
+                  "value": 0
+                },
+                {
+                  "type": "input_dummy",
+                },
+                { "type": "input_value", 
+                "name": "COLOR" 
+                }
+              ],
+              "previousStatement": null,
+              "nextStatement": null,
+              "colour": "#370ACD",
+              "tooltip": "",
+              "helpUrl": ""
+            }
+      );
+          }
+};
+
+Blockly.Python['tft_lcd_draw_text_pickcolor'] = function(block) {
+  var text = Blockly.Python.valueToCode(block, 'text', Blockly.Python.ORDER_ATOMIC);
+  var x = Blockly.Python.valueToCode(block, 'x', Blockly.Python.ORDER_ATOMIC);
+  var y = Blockly.Python.valueToCode(block, 'y', Blockly.Python.ORDER_ATOMIC);
+  var value_color = Blockly.Python.valueToCode(block, 'COLOR', Blockly.Python.ORDER_ATOMIC);
+  var text = str(value_color);
+  var r = text[1:3] ;
+  var g = text[3:5] ;
+  var b = text[5:7] ;
+  // TODO: Assemble Python into code variable.
+  var code = 'display.draw_text8x8('+x+','+y+','+text+', color565('+r+','+g+','+b+'))\n';;
+  return code;
+};
