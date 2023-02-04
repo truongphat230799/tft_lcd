@@ -558,28 +558,6 @@ Blockly.Blocks['tft_lcd_print'] = {
                     "type": "input_value",
                     "name": "y",
                     "value": 0
-                  },
-                  {
-                    "type": "field_dropdown",
-                    "name": "font",
-                    "options": [
-                      [
-                        "minimum",
-                        "glcdfont"
-                      ],
-                      [
-                        "cỡ 14",
-                        "tt14"
-                      ],
-                      [
-                        "cỡ 24",
-                        "tt24"
-                      ],
-                      [
-                        "cỡ 32",
-                        "tt32"
-                      ]
-                    ]
                   }
                 ],
                 "previousStatement": null,
