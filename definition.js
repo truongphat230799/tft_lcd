@@ -476,7 +476,7 @@ Blockly.Blocks['tft_lcd_create'] = {
             ],
             "previousStatement": null,
             "nextStatement": null,
-            "colour": 230,
+            "colour": "#44cbc6",
             "tooltip": "",
             "helpUrl": ""
           }
@@ -514,7 +514,7 @@ Blockly.Blocks['tft_lcd_clear'] = {
                 "message0": "xóa màn hình TFT",
                 "previousStatement": null,
                 "nextStatement": null,
-                "colour": 230,
+                "colour": "#44cbc6",
                 "tooltip": "",
                 "helpUrl": ""
               }
@@ -584,7 +584,7 @@ Blockly.Blocks['tft_lcd_print'] = {
                 ],
                 "previousStatement": null,
                 "nextStatement": null,
-                "colour": 230,
+                "colour": "#44cbc6",
                 "tooltip": "",
                 "helpUrl": ""
               }
@@ -698,7 +698,7 @@ Blockly.Blocks['tft_lcd_draw'] = {
                 ],
                 "previousStatement": null,
                 "nextStatement": null,
-                "colour": 230,
+                "colour": "#44cbc6",
                 "tooltip": "",
                 "helpUrl": ""
               }
@@ -777,7 +777,7 @@ Blockly.Blocks['tft_lcd_draw_text'] = {
                 ],
                 "previousStatement": null,
                 "nextStatement": null,
-                "colour": 230,
+                "colour": "#44cbc6",
                 "tooltip": "",
                 "helpUrl": ""
               }
