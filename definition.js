@@ -228,6 +228,9 @@ Blockly.Blocks['tft_lcd_create'] = {
                 ]
               },
               {
+                    "type": "input_dummy",
+              },
+              {
                 "type": "field_dropdown",
                 "name": "cs_pin",
                 "options": [
