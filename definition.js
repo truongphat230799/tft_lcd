@@ -476,7 +476,7 @@ Blockly.Blocks['tft_lcd_create'] = {
             ],
             "previousStatement": null,
             "nextStatement": null,
-            "colour": "#44cbc6",
+            "colour": "#370ACD",
             "tooltip": "",
             "helpUrl": ""
           }
@@ -514,7 +514,7 @@ Blockly.Blocks['tft_lcd_clear'] = {
                 "message0": "xóa màn hình TFT",
                 "previousStatement": null,
                 "nextStatement": null,
-                "colour": "#44cbc6",
+                "colour": "#370ACD",
                 "tooltip": "",
                 "helpUrl": ""
               }
@@ -562,7 +562,7 @@ Blockly.Blocks['tft_lcd_print'] = {
                 ],
                 "previousStatement": null,
                 "nextStatement": null,
-                "colour": "#44cbc6",
+                "colour": "#370ACD",
                 "tooltip": "",
                 "helpUrl": ""
               }
@@ -675,7 +675,7 @@ Blockly.Blocks['tft_lcd_draw'] = {
                 ],
                 "previousStatement": null,
                 "nextStatement": null,
-                "colour": "#44cbc6",
+                "colour": "#370ACD",
                 "tooltip": "",
                 "helpUrl": ""
               }
@@ -754,7 +754,7 @@ Blockly.Blocks['tft_lcd_draw_text'] = {
                 ],
                 "previousStatement": null,
                 "nextStatement": null,
-                "colour": "#44cbc6",
+                "colour": "#370ACD",
                 "tooltip": "",
                 "helpUrl": ""
               }
@@ -805,7 +805,7 @@ Blockly.Blocks['tft_lcd_font'] = {
                 }],
               "previousStatement": null,
               "nextStatement": null,
-              "colour": "#44cbc6",
+              "colour": "#370ACD",
               "tooltip": "",
               "helpUrl": ""
             }
@@ -906,7 +906,7 @@ Blockly.Blocks['tft_lcd_draw_line'] = {
               ],
               "previousStatement": null,
               "nextStatement": null,
-              "colour": "#44cbc6",
+              "colour": "#370ACD",
               "tooltip": "",
               "helpUrl": ""
             }
@@ -923,7 +923,7 @@ Blockly.Python['tft_lcd_draw_line'] = function(block) {
   var g = Blockly.Python.valueToCode(block, 'g', Blockly.Python.ORDER_ATOMIC);
   var b = Blockly.Python.valueToCode(block, 'b', Blockly.Python.ORDER_ATOMIC);
   // TODO: Assemble Python into code variable.
-  var code = 'display.' + shape+'('+x+','+y+','+w+', color565('+r+','+g+','+b+'))\n';
+  var code = 'display.' + line+'('+x+','+y+','+w+', color565('+r+','+g+','+b+'))\n';
   return code;
 };
 
