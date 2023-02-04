@@ -981,10 +981,7 @@ Blockly.Python['tft_lcd_draw_text_pickcolor'] = function(block) {
   var y = Blockly.Python.valueToCode(block, 'y', Blockly.Python.ORDER_ATOMIC);
   var value_color = Blockly.Python.valueToCode(block, 'COLOR', Blockly.Python.ORDER_ATOMIC);
   var text = str(value_color);
-  var r = text[1:3] ;
-  var g = text[3:5] ;
-  var b = text[5:7] ;
   // TODO: Assemble Python into code variable.
-  var code = 'display.draw_text8x8('+x+','+y+','+text+', color565('+r+','+g+','+b+'))\n';;
+  var code = 'display.draw_text8x8('+x+','+y+','+text+', color565(0x'+text[[1],[3]]+',0x'+text[[3],[5]]+',0x'+text[[5],[7]]+'))\n';;
   return code;
 };
