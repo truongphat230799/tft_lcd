@@ -531,51 +531,6 @@ Blockly.Python['tft_lcd_clear'] = function(block) {
     return code;
 };
 
-Blockly.Blocks['tft_lcd_font'] = {
-    init: function () {
-        this.jsonInit(
-            {
-                "type": "tft_lcd_font",
-                "message0": "chọn font chữ %1",
-                "args0": [
-                  {
-                    "type": "field_dropdown",
-                    "name": "font",
-                    "options": [
-                      [
-                        "minimum",
-                        "glcdfont"
-                      ],
-                      [
-                        "cỡ 14",
-                        "tt14"
-                      ],
-                      [
-                        "cỡ 24",
-                        "tt24"
-                      ],
-                      [
-                        "cỡ 32",
-                        "tt32"
-                      ]
-                    ]
-                  }],
-                "previousStatement": null,
-                "nextStatement": null,
-                "colour": "#44cbc6",
-                "tooltip": "",
-                "helpUrl": ""
-              }
-        );
-        }
-    };
-
-Blockly.Python['tft_lcd_font'] = function(block) {
-    var font = block.getFieldValue('font');
-    // TODO: Assemble Python into code variable.
-    var code = 'display.set_font('+font+')\n';
-    return code;
-};
 
 Blockly.Blocks['tft_lcd_print'] = {
     init: function () {
