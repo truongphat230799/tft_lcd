@@ -582,7 +582,7 @@ Blockly.Blocks['tft_lcd_draw'] = {
         this.jsonInit(
             {
                 "type": "tft_lcd_draw",
-                "message0": "vẽ  %1 dài %3%2 rộng %5%4 tại x %7%6 y %9%8 tỉ lệ màu R %11%10 G %13%12 B %15%14",
+                "message0": "vẽ  %1 dài %3%2 rộng %5%4 tại x %7%6 y %9%8màu%11%10",
                 "args0": [
                   {
                     "type": "field_dropdown",
@@ -645,32 +645,8 @@ Blockly.Blocks['tft_lcd_draw'] = {
                   {
                     "type": "input_dummy",
                   },
-                  {
-                    "type": "input_value",
-                    "name": "r",
-                    "value": 0,
-                    "min": 0,
-                    "max": 255
-                  },
-                  {
-                    "type": "input_dummy",
-                  },
-                  {
-                    "type": "input_value",
-                    "name": "g",
-                    "value": 0,
-                    "min": 0,
-                    "max": 255
-                  },
-                  {
-                    "type": "input_dummy",
-                  },
-                  {
-                    "type": "input_value",
-                    "name": "b",
-                    "value": 0,
-                    "min": 0,
-                    "max": 255
+                  { "type": "input_value", 
+                    "name": "COLOR" 
                   }
                 ],
                 "previousStatement": null,
@@ -688,92 +664,11 @@ Blockly.Python['tft_lcd_draw'] = function(block) {
     var shape = block.getFieldValue('shape');
     var x = Blockly.Python.valueToCode(block, 'x', Blockly.Python.ORDER_ATOMIC);
     var y = Blockly.Python.valueToCode(block, 'y', Blockly.Python.ORDER_ATOMIC);
-    var r = Blockly.Python.valueToCode(block, 'r', Blockly.Python.ORDER_ATOMIC);
-    var g = Blockly.Python.valueToCode(block, 'g', Blockly.Python.ORDER_ATOMIC);
-    var b = Blockly.Python.valueToCode(block, 'b', Blockly.Python.ORDER_ATOMIC);
+    var value_color = Blockly.Python.valueToCode(block, 'COLOR', Blockly.Python.ORDER_ATOMIC);
     // TODO: Assemble Python into code variable.
-    var code = 'display.' + shape+'('+x+','+y+','+w+','+h+', color565('+r+','+g+','+b+'))\n';
+    var code = 'display.' + shape+'('+x+','+y+','+w+','+h+', color565(0x'+value_color[[1],[2]]+value_color[[2],[3]]+',0x'+value_color[[3],[4]]+value_color[[4],[5]]+',0x'+value_color[[5],[6]]+value_color[[6],[7]]+'))\n';
     return code;
 };
-
-Blockly.Blocks['tft_lcd_draw_text'] = {
-    init: function () {
-        this.jsonInit(
-            {
-                "type": "tft_lcd_draw_text",
-                "message0": "hiện lên TFT LCD  %2%1 tại x %4%3 y %6%5 màu R %8%7 G %10%9 B %12%11",
-                "args0": [
-                  {
-                    "type": "input_dummy",
-                  }, 
-                  {
-                    "type": "input_value",
-                    "name": "text",
-                    "text": "thông tin"
-                  },
-                  {
-                    "type": "input_dummy",
-                  },
-                  {
-                    "type": "input_value",
-                    "name": "x",
-                    "value": 0
-                  },
-                  {
-                    "type": "input_dummy",
-                  },
-                  {
-                    "type": "input_value",
-                    "name": "y",
-                    "value": 0
-                  },
-                  {
-                    "type": "input_dummy",
-                  },
-                  {
-                    "type": "input_value",
-                    "name": "r",
-                    "value": 0
-                  },
-                  {
-                    "type": "input_dummy",
-                  },
-                  {
-                    "type": "input_value",
-                    "name": "g",
-                    "value": 0
-                  },
-                  {
-                    "type": "input_dummy",
-                  },
-                  {
-                    "type": "input_value",
-                    "name": "b",
-                    "value": 0
-                  }
-                ],
-                "previousStatement": null,
-                "nextStatement": null,
-                "colour": "#370ACD",
-                "tooltip": "",
-                "helpUrl": ""
-              }
-        );
-            }
-};
-
-Blockly.Python['tft_lcd_draw_text'] = function(block) {
-    var text = Blockly.Python.valueToCode(block, 'text', Blockly.Python.ORDER_ATOMIC);
-    var x = Blockly.Python.valueToCode(block, 'x', Blockly.Python.ORDER_ATOMIC);
-    var y = Blockly.Python.valueToCode(block, 'y', Blockly.Python.ORDER_ATOMIC);
-    var r = Blockly.Python.valueToCode(block, 'r', Blockly.Python.ORDER_ATOMIC);
-    var g = Blockly.Python.valueToCode(block, 'g', Blockly.Python.ORDER_ATOMIC);
-    var b = Blockly.Python.valueToCode(block, 'b', Blockly.Python.ORDER_ATOMIC);
-    // TODO: Assemble Python into code variable.
-    var code = 'display.draw_text8x8('+x+','+y+','+text+', color565('+r+','+g+','+b+'))\n';;
-    return code;
-};
-
 Blockly.Blocks['tft_lcd_font'] = {
   init: function () {
       this.jsonInit(
@@ -825,7 +720,7 @@ Blockly.Blocks['tft_lcd_draw_line'] = {
       this.jsonInit(
           {
               "type": "tft_lcd_draw_line",
-              "message0": "vẽ %1 rộng %3%2 tại x %5%4 y %7%6 tỉ lệ màu R %9%8 G %11%10 B %13%12",
+              "message0": "vẽ %1 rộng %3%2 tại x %5%4 y %7%6màu %9%8",
               "args0": [
                 {
                   "type": "field_dropdown",
@@ -876,32 +771,8 @@ Blockly.Blocks['tft_lcd_draw_line'] = {
                 {
                   "type": "input_dummy",
                 },
-                {
-                  "type": "input_value",
-                  "name": "r",
-                  "value": 0,
-                  "min": 0,
-                  "max": 255
-                },
-                {
-                  "type": "input_dummy",
-                },
-                {
-                  "type": "input_value",
-                  "name": "g",
-                  "value": 0,
-                  "min": 0,
-                  "max": 255
-                },
-                {
-                  "type": "input_dummy",
-                },
-                {
-                  "type": "input_value",
-                  "name": "b",
-                  "value": 0,
-                  "min": 0,
-                  "max": 255
+                { "type": "input_value", 
+                "name": "COLOR" 
                 }
               ],
               "previousStatement": null,
@@ -919,11 +790,9 @@ Blockly.Python['tft_lcd_draw_line'] = function(block) {
   var line = block.getFieldValue('line');
   var x = Blockly.Python.valueToCode(block, 'x', Blockly.Python.ORDER_ATOMIC);
   var y = Blockly.Python.valueToCode(block, 'y', Blockly.Python.ORDER_ATOMIC);
-  var r = Blockly.Python.valueToCode(block, 'r', Blockly.Python.ORDER_ATOMIC);
-  var g = Blockly.Python.valueToCode(block, 'g', Blockly.Python.ORDER_ATOMIC);
-  var b = Blockly.Python.valueToCode(block, 'b', Blockly.Python.ORDER_ATOMIC);
+  var value_color = Blockly.Python.valueToCode(block, 'COLOR', Blockly.Python.ORDER_ATOMIC);
   // TODO: Assemble Python into code variable.
-  var code = 'display.' + line+'('+x+','+y+','+w+', color565('+r+','+g+','+b+'))\n';
+  var code = 'display.' + line+'('+x+','+y+','+w+', color565(0x'+value_color[[1],[2]]+value_color[[2],[3]]+',0x'+value_color[[3],[4]]+value_color[[4],[5]]+',0x'+value_color[[5],[6]]+value_color[[6],[7]]+'))\n';
   return code;
 };
 
@@ -981,6 +850,6 @@ Blockly.Python['tft_lcd_draw_text_pickcolor'] = function(block) {
   var y = Blockly.Python.valueToCode(block, 'y', Blockly.Python.ORDER_ATOMIC);
   var value_color = Blockly.Python.valueToCode(block, 'COLOR', Blockly.Python.ORDER_ATOMIC);
   // TODO: Assemble Python into code variable.
-  var code = 'display.draw_text8x8('+x+','+y+','+text+', color565(0x'+value_color[[1],[2]]+value_color[[2],[3]]+',0x'+value_color[[3],[4]]+value_color[[4],[5]]+',0x'+value_color[[5],[6]]+value_color[[6],[7]]+'))\n';;
+  var code = 'display.draw_text8x8('+x+','+y+','+text+', color565(0x'+value_color[[1],[2]]+value_color[[2],[3]]+',0x'+value_color[[3],[4]]+value_color[[4],[5]]+',0x'+value_color[[5],[6]]+value_color[[6],[7]]+'))\n';
   return code;
 };
