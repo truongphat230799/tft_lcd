@@ -868,3 +868,68 @@ Blockly.Python['tft_lcd_draw_text_pickcolor'] = function(block) {
   var code = 'display.draw_text8x8('+x+','+y+','+text+', color565(0x'+value_color[[1],[2]]+value_color[[2],[3]]+',0x'+value_color[[3],[4]]+value_color[[4],[5]]+',0x'+value_color[[5],[6]]+value_color[[6],[7]]+'))\n';
   return code;
 };
+Blockly.Blocks['tft_lcd_draw_coord_line'] = {
+  init: function () {
+      this.jsonInit(
+          {
+              "type": "tft_lcd_draw_coord_line",
+              "message0": "vẽ đường thẳng vị trí x1 %2%1 y1 %4%3 x2 %6%5 y2 %8%7màu%10%9",
+              "args0": [
+                {
+                  "type": "input_dummy",
+                },
+                {
+                  "type": "input_value",
+                  "name": "x1",
+                  "value": 0
+                },
+                {
+                  "type": "input_dummy",
+                },
+                {
+                  "type": "input_value",
+                  "name": "y1",
+                  "value": 0
+                },
+                {
+                  "type": "input_dummy",
+                },
+                {
+                  "type": "input_value",
+                  "name": "x2",
+                  "value": 0
+                },
+                {
+                  "type": "input_dummy",
+                },
+                {
+                  "type": "input_value",
+                  "name": "y2",
+                  "value": 0
+                },
+                {
+                  "type": "input_dummy",
+                },
+                { "type": "input_value", 
+                  "name": "COLOR" 
+                }
+              ],
+              "previousStatement": null,
+              "nextStatement": null,
+              "colour": "#370ACD",
+              "tooltip": "",
+              "helpUrl": ""
+            }
+      );
+          }
+};
+Blockly.Python['tft_lcd_draw_coord_line'] = function(block) {
+  var x1 = Blockly.Python.valueToCode(block, 'w', Blockly.Python.ORDER_ATOMIC);
+  var y1 = Blockly.Python.valueToCode(block, 'h', Blockly.Python.ORDER_ATOMIC);
+  var x = Blockly.Python.valueToCode(block, 'x', Blockly.Python.ORDER_ATOMIC);
+  var y = Blockly.Python.valueToCode(block, 'y', Blockly.Python.ORDER_ATOMIC);
+  var value_color = Blockly.Python.valueToCode(block, 'COLOR', Blockly.Python.ORDER_ATOMIC);
+  // TODO: Assemble Python into code variable.
+  var code = 'display.' + shape+'('+x1+','+y1+','+x2+','+y2+', color565(0x'+value_color[[1],[2]]+value_color[[2],[3]]+',0x'+value_color[[3],[4]]+value_color[[4],[5]]+',0x'+value_color[[5],[6]]+value_color[[6],[7]]+'))\n';
+  return code;
+};
