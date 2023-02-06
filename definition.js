@@ -486,7 +486,7 @@ Blockly.Blocks['tft_lcd_create'] = {
 
     Blockly.Python['tft_lcd_create'] = function(block) {
         Blockly.Python.definitions_['import_yolobit'] = 'from yolobit import *';
-        Blockly.Python.definitions_['import_yolobit_tft_lcd'] = 'from tft_lcd import ILI9341, color565';
+        Blockly.Python.definitions_['import_yolobit_tft_lcd'] = 'from tftlcd import ILI9341, color565';
         Blockly.Python.definitions_['import_spi'] = 'from machine import Pin, SPI';
         Blockly.Python.definitions_['import_font_glcd'] = 'import glcdfont';
         Blockly.Python.definitions_['import_font_tt14'] = 'import tt14';
