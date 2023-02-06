@@ -552,7 +552,7 @@ Blockly.Blocks['tft_lcd_print'] = {
         this.jsonInit(
             {
                 "type": "tft_lcd_print",
-                "message0": "hiện chữ%1%2 tại x %3%4 y %5%6",
+                "message0": "hiện chữ%1%2 vị trí x %3%4 y %5%6",
                 "args0": [
                   {
                     "type": "input_dummy",
@@ -735,7 +735,7 @@ Blockly.Blocks['tft_lcd_draw_line'] = {
       this.jsonInit(
           {
               "type": "tft_lcd_draw_line",
-              "message0": "vẽ %1dài%3%2vị tríx %5%4 y %7%6màu %9%8",
+              "message0": "vẽ %1dài%3%2vị trí x%5%4 y %7%6màu %9%8",
               "args0": [
                 {
                   "type": "field_dropdown",
