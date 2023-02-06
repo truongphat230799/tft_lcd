@@ -495,7 +495,7 @@ Blockly.Blocks['tft_lcd_create'] = {
           ],
           "previousStatement": null,
           "nextStatement": null,
-          "colour": 230,
+          "colour": "#370ACD",
           "tooltip": "",
           "helpUrl": ""
         }
