@@ -2,511 +2,503 @@ Blockly.Blocks['tft_lcd_create'] = {
     init: function () {
       this.jsonInit(
         {
-            "type": "tft_lcd_create",
-            "message0": "khởi tạo LCD TFT chân%13 MISO%1%14MOSI%2%15SCK%3%21CS%4%16DC%5%17RST%6%18rộng%7%8%19cao %9 %10%20 hướng %11%12",
-            "args0": [
-              {
-                "type": "field_dropdown",
-                "name": "miso_pin",
-                "options": [
-                  [
-                    "P15",
-                    "pin15"
-                  ],
-                  [
-                    "P1",
-                    "pin1"
-                  ],
-                  [
-                    "P2",
-                    "pin2"
-                  ],
-                  [
-                    "P3",
-                    "pin3"
-                  ],
-                  [
-                    "P4",
-                    "pin4"
-                  ],
-                  [
-                    "P5",
-                    "pin5"
-                  ],
-                  [
-                    "P6",
-                    "pin6"
-                  ],
-                  [
-                    "P7",
-                    "pin7"
-                  ],
-                  [
-                    "P8",
-                    "pin8"
-                  ],
-                  [
-                    "P9",
-                    "pin9"
-                  ],
-                  [
-                    "P10",
-                    "pin10"
-                  ],
-                  [
-                    "P11",
-                    "pin11"
-                  ],
-                  [
-                    "P12",
-                    "pin12"
-                  ],
-                  [
-                    "P13",
-                    "pin13"
-                  ],
-                  [
-                    "P14",
-                    "pin14"
-                  ],
-                  [
-                    "P0",
-                    "pin0"
-                  ],
-                  [
-                    "P16",
-                    "pin16"
-                  ]
+          "type": "tft_lcd_create",
+          "lastDummyAlign0": "RIGHT",
+          "message0": "khởi tạo LCD TFT chân %1 MISO %2 %3 MOSI %4 %5 SCK %6 %7 CS %8 %9 DC %10 %11 RST %12 %13 rộng %14 %15 cao %16",
+          "args0": [
+            {
+              "type": "input_dummy",
+              "align": "RIGHT"
+            },
+            {
+              "type": "field_dropdown",
+              "name": "miso_pin",
+              "options": [
+                [
+                  "P15",
+                  "pin15"
+                ],
+                [
+                  "P0",
+                  "pin0"
+                ],
+                [
+                  "P1",
+                  "pin1"
+                ],
+                [
+                  "P2",
+                  "pin2"
+                ],
+                [
+                  "P3",
+                  "pin3"
+                ],
+                [
+                  "P4",
+                  "pin4"
+                ],
+                [
+                  "P5",
+                  "pin5"
+                ],
+                [
+                  "P6",
+                  "pin6"
+                ],
+                [
+                  "P7",
+                  "pin7"
+                ],
+                [
+                  "P8",
+                  "pin8"
+                ],
+                [
+                  "P9",
+                  "pin9"
+                ],
+                [
+                  "P10",
+                  "pin10"
+                ],
+                [
+                  "P11",
+                  "pin11"
+                ],
+                [
+                  "P12",
+                  "pin12"
+                ],
+                [
+                  "P13",
+                  "pin13"
+                ],
+                [
+                  "P14",
+                  "pin14"
+                ],
+                [
+                  "P16",
+                  "pin16"
                 ]
-              },
-              {
-                "type": "field_dropdown",
-                "name": "mosi_pin",
-                "options": [
-                  [
-                    "P16",
-                    "pin16"
-                  ],
-                  [
-                    "P1",
-                    "pin1"
-                  ],
-                  [
-                    "P2",
-                    "pin2"
-                  ],
-                  [
-                    "P3",
-                    "pin3"
-                  ],
-                  [
-                    "P4",
-                    "pin4"
-                  ],
-                  [
-                    "P5",
-                    "pin5"
-                  ],
-                  [
-                    "P6",
-                    "pin6"
-                  ],
-                  [
-                    "P7",
-                    "pin7"
-                  ],
-                  [
-                    "P8",
-                    "pin8"
-                  ],
-                  [
-                    "P9",
-                    "pin9"
-                  ],
-                  [
-                    "P10",
-                    "pin10"
-                  ],
-                  [
-                    "P11",
-                    "pin11"
-                  ],
-                  [
-                    "P12",
-                    "pin12"
-                  ],
-                  [
-                    "P13",
-                    "pin13"
-                  ],
-                  [
-                    "P14",
-                    "pin14"
-                  ],
-                  [
-                    "P15",
-                    "pin15"
-                  ],
-                  [
-                    "P0",
-                    "pin0"
-                  ]
+              ]
+            },
+            {
+              "type": "input_dummy",
+              "align": "RIGHT"
+            },
+            {
+              "type": "field_dropdown",
+              "name": "mosi_pin",
+              "options": [
+                [
+                  "P16",
+                  "pin16"
+                ],
+                [
+                  "P0",
+                  "pin0"
+                ],
+                [
+                  "P1",
+                  "pin1"
+                ],
+                [
+                  "P2",
+                  "pin2"
+                ],
+                [
+                  "P3",
+                  "pin3"
+                ],
+                [
+                  "P4",
+                  "pin4"
+                ],
+                [
+                  "P5",
+                  "pin5"
+                ],
+                [
+                  "P6",
+                  "pin6"
+                ],
+                [
+                  "P7",
+                  "pin7"
+                ],
+                [
+                  "P8",
+                  "pin8"
+                ],
+                [
+                  "P9",
+                  "pin9"
+                ],
+                [
+                  "P10",
+                  "pin10"
+                ],
+                [
+                  "P11",
+                  "pin11"
+                ],
+                [
+                  "P12",
+                  "pin12"
+                ],
+                [
+                  "P13",
+                  "pin13"
+                ],
+                [
+                  "P14",
+                  "pin14"
+                ],
+                [
+                  "P15",
+                  "pin15"
                 ]
-              },
-              {
-                "type": "field_dropdown",
-                "name": "sck_pin",
-                "options": [
-                  [
-                    "P13",
-                    "pin13"
-                  ],
-                  [
-                    "P1",
-                    "pin1"
-                  ],
-                  [
-                    "P2",
-                    "pin2"
-                  ],
-                  [
-                    "P3",
-                    "pin3"
-                  ],
-                  [
-                    "P4",
-                    "pin4"
-                  ],
-                  [
-                    "P5",
-                    "pin5"
-                  ],
-                  [
-                    "P6",
-                    "pin6"
-                  ],
-                  [
-                    "P7",
-                    "pin7"
-                  ],
-                  [
-                    "P8",
-                    "pin8"
-                  ],
-                  [
-                    "P9",
-                    "pin9"
-                  ],
-                  [
-                    "P10",
-                    "pin10"
-                  ],
-                  [
-                    "P11",
-                    "pin11"
-                  ],
-                  [
-                    "P12",
-                    "pin12"
-                  ],
-                  [
-                    "P0",
-                    "pin0"
-                  ],
-                  [
-                    "P14",
-                    "pin14"
-                  ],
-                  [
-                    "P15",
-                    "pin15"
-                  ],
-                  [
-                    "P16",
-                    "pin16"
-                  ]
+              ]
+            },
+            {
+              "type": "input_dummy",
+              "align": "RIGHT"
+            },
+            {
+              "type": "field_dropdown",
+              "name": "sck_pin",
+              "options": [
+                [
+                  "P13",
+                  "pin13"
+                ],
+                [
+                  "P0",
+                  "pin0"
+                ],
+                [
+                  "P1",
+                  "pin1"
+                ],
+                [
+                  "P2",
+                  "pin2"
+                ],
+                [
+                  "P3",
+                  "pin3"
+                ],
+                [
+                  "P4",
+                  "pin4"
+                ],
+                [
+                  "P5",
+                  "pin5"
+                ],
+                [
+                  "P6",
+                  "pin6"
+                ],
+                [
+                  "P7",
+                  "pin7"
+                ],
+                [
+                  "P8",
+                  "pin8"
+                ],
+                [
+                  "P9",
+                  "pin9"
+                ],
+                [
+                  "P10",
+                  "pin10"
+                ],
+                [
+                  "P11",
+                  "pin11"
+                ],
+                [
+                  "P12",
+                  "pin12"
+                ],
+                [
+                  "P15",
+                  "pin15"
+                ],
+                [
+                  "P14",
+                  "pin14"
+                ],
+                [
+                  "P16",
+                  "pin16"
                 ]
-              },
-              {
-                "type": "field_dropdown",
-                "name": "cs_pin",
-                "options": [
-                  [
-                    "P14",
-                    "pin14"
-                  ],
-                  [
-                    "P1",
-                    "pin1"
-                  ],
-                  [
-                    "P2",
-                    "pin2"
-                  ],
-                  [
-                    "P3",
-                    "pin3"
-                  ],
-                  [
-                    "P4",
-                    "pin4"
-                  ],
-                  [
-                    "P5",
-                    "pin5"
-                  ],
-                  [
-                    "P6",
-                    "pin6"
-                  ],
-                  [
-                    "P7",
-                    "pin7"
-                  ],
-                  [
-                    "P8",
-                    "pin8"
-                  ],
-                  [
-                    "P9",
-                    "pin9"
-                  ],
-                  [
-                    "P10",
-                    "pin10"
-                  ],
-                  [
-                    "P11",
-                    "pin11"
-                  ],
-                  [
-                    "P12",
-                    "pin12"
-                  ],
-                  [
-                    "P13",
-                    "pin13"
-                  ],
-                  [
-                    "P0",
-                    "pin0"
-                  ],
-                  [
-                    "P15",
-                    "pin15"
-                  ],
-                  [
-                    "P16",
-                    "pin16"
-                  ]
+              ]
+            },
+            {
+              "type": "input_dummy",
+              "align": "RIGHT"
+            },
+            {
+              "type": "field_dropdown",
+              "name": "cs_pin",
+              "options": [
+                [
+                  "P14",
+                  "pin14"
+                ],
+                [
+                  "P0",
+                  "pin0"
+                ],
+                [
+                  "P1",
+                  "pin1"
+                ],
+                [
+                  "P2",
+                  "pin2"
+                ],
+                [
+                  "P3",
+                  "pin3"
+                ],
+                [
+                  "P4",
+                  "pin4"
+                ],
+                [
+                  "P5",
+                  "pin5"
+                ],
+                [
+                  "P6",
+                  "pin6"
+                ],
+                [
+                  "P7",
+                  "pin7"
+                ],
+                [
+                  "P8",
+                  "pin8"
+                ],
+                [
+                  "P9",
+                  "pin9"
+                ],
+                [
+                  "P10",
+                  "pin10"
+                ],
+                [
+                  "P11",
+                  "pin11"
+                ],
+                [
+                  "P12",
+                  "pin12"
+                ],
+                [
+                  "P13",
+                  "pin13"
+                ],
+                [
+                  "P15",
+                  "pin15"
+                ],
+                [
+                  "P16",
+                  "pin16"
                 ]
-              },
-              {
-                "type": "field_dropdown",
-                "name": "dc_pin",
-                "options": [
-                  [
-                    "P10",
-                    "pin10"
-                  ],
-                  [
-                    "P1",
-                    "pin1"
-                  ],
-                  [
-                    "P2",
-                    "pin2"
-                  ],
-                  [
-                    "P3",
-                    "pin3"
-                  ],
-                  [
-                    "P4",
-                    "pin4"
-                  ],
-                  [
-                    "P5",
-                    "pin5"
-                  ],
-                  [
-                    "P6",
-                    "pin6"
-                  ],
-                  [
-                    "P7",
-                    "pin7"
-                  ],
-                  [
-                    "P8",
-                    "pin8"
-                  ],
-                  [
-                    "P9",
-                    "pin9"
-                  ],
-                  [
-                    "P0",
-                    "pin0"
-                  ],
-                  [
-                    "P11",
-                    "pin11"
-                  ],
-                  [
-                    "P12",
-                    "pin12"
-                  ],
-                  [
-                    "P13",
-                    "pin13"
-                  ],
-                  [
-                    "P14",
-                    "pin14"
-                  ],
-                  [
-                    "P15",
-                    "pin15"
-                  ],
-                  [
-                    "P16",
-                    "pin16"
-                  ]
+              ]
+            },
+            {
+              "type": "input_dummy",
+              "align": "RIGHT"
+            },
+            {
+              "type": "field_dropdown",
+              "name": "dc_pin",
+              "options": [
+                [
+                  "P10",
+                  "pin10"
+                ],
+                [
+                  "P0",
+                  "pin0"
+                ],
+                [
+                  "P1",
+                  "pin1"
+                ],
+                [
+                  "P2",
+                  "pin2"
+                ],
+                [
+                  "P3",
+                  "pin3"
+                ],
+                [
+                  "P4",
+                  "pin4"
+                ],
+                [
+                  "P5",
+                  "pin5"
+                ],
+                [
+                  "P6",
+                  "pin6"
+                ],
+                [
+                  "P7",
+                  "pin7"
+                ],
+                [
+                  "P8",
+                  "pin8"
+                ],
+                [
+                  "P9",
+                  "pin9"
+                ],
+                [
+                  "P15",
+                  "pin15"
+                ],
+                [
+                  "P11",
+                  "pin11"
+                ],
+                [
+                  "P12",
+                  "pin12"
+                ],
+                [
+                  "P13",
+                  "pin13"
+                ],
+                [
+                  "P14",
+                  "pin14"
+                ],
+                [
+                  "P16",
+                  "pin16"
                 ]
-              },
-              {
-                "type": "field_dropdown",
-                "name": "rst_pin",
-                "options": [
-                  [
-                    "P12",
-                    "pin12"
-                  ],
-                  [
-                    "P1",
-                    "pin1"
-                  ],
-                  [
-                    "P2",
-                    "pin2"
-                  ],
-                  [
-                    "P3",
-                    "pin3"
-                  ],
-                  [
-                    "P4",
-                    "pin4"
-                  ],
-                  [
-                    "P5",
-                    "pin5"
-                  ],
-                  [
-                    "P6",
-                    "pin6"
-                  ],
-                  [
-                    "P7",
-                    "pin7"
-                  ],
-                  [
-                    "P8",
-                    "pin8"
-                  ],
-                  [
-                    "P9",
-                    "pin9"
-                  ],
-                  [
-                    "P10",
-                    "pin10"
-                  ],
-                  [
-                    "P11",
-                    "pin11"
-                  ],
-                  [
-                    "P0",
-                    "pin0"
-                  ],
-                  [
-                    "P13",
-                    "pin13"
-                  ],
-                  [
-                    "P14",
-                    "pin14"
-                  ],
-                  [
-                    "P15",
-                    "pin15"
-                  ],
-                  [
-                    "P16",
-                    "pin16"
-                  ]
+              ]
+            },
+            {
+              "type": "input_dummy",
+              "align": "RIGHT"
+            },
+            {
+              "type": "field_dropdown",
+              "name": "rst_pin",
+              "options": [
+                [
+                  "P12",
+                  "pin12"
+                ],
+                [
+                  "P0",
+                  "pin0"
+                ],
+                [
+                  "P1",
+                  "pin1"
+                ],
+                [
+                  "P2",
+                  "pin2"
+                ],
+                [
+                  "P3",
+                  "pin3"
+                ],
+                [
+                  "P4",
+                  "pin4"
+                ],
+                [
+                  "P5",
+                  "pin5"
+                ],
+                [
+                  "P6",
+                  "pin6"
+                ],
+                [
+                  "P7",
+                  "pin7"
+                ],
+                [
+                  "P8",
+                  "pin8"
+                ],
+                [
+                  "P9",
+                  "pin9"
+                ],
+                [
+                  "P10",
+                  "pin10"
+                ],
+                [
+                  "P11",
+                  "pin11"
+                ],
+                [
+                  "P15",
+                  "pin15"
+                ],
+                [
+                  "P13",
+                  "pin13"
+                ],
+                [
+                  "P14",
+                  "pin14"
+                ],
+                [
+                  "P16",
+                  "pin16"
                 ]
-              },
-              {
-                "type": "input_dummy",
-              },
-              {
-                "type": "input_value",
-                "name": "width",
-                "value": 240
-              },
-              {
-                "type": "input_dummy",
-              },
-              {
-                "type": "input_value",
-                "name": "high",
-                "value": 320
-              },
-              {
-                "type": "input_dummy",
-              },
-              {
-                "type": "input_value",
-                "name": "rotation",
-                "value": 0
-              },
-              {
-                "type": "input_dummy",
-              },
-              {
-                "type": "input_dummy",
-              },
-              {
-                "type": "input_dummy",
-              },
-              {
-                "type": "input_dummy",
-              },
-              {
-                "type": "input_dummy",
-              },
-              {
-                "type": "input_dummy",
-              },
-              {
-                "type": "input_dummy",
-              },
-              {
-                "type": "input_dummy",
-              },
-              {
-                "type": "input_dummy",
-              }
-            ],
-            "previousStatement": null,
-            "nextStatement": null,
-            "colour": "#370ACD",
-            "tooltip": "",
-            "helpUrl": ""
-          }
+              ]
+            },
+            {
+              "type": "input_dummy",
+              "align": "RIGHT"
+            },
+            {
+              "type": "field_number",
+              "name": "width",
+              "value": 0
+            },
+            {
+              "type": "input_dummy",
+              "align": "RIGHT"
+            },
+            {
+              "type": "field_number",
+              "name": "high",
+              "value": 0
+            }
+          ],
+          "previousStatement": null,
+          "nextStatement": null,
+          "colour": 230,
+          "tooltip": "",
+          "helpUrl": ""
+        }
       );
         }
     };
@@ -527,9 +519,9 @@ Blockly.Blocks['tft_lcd_create'] = {
         var rst_pin = block.getFieldValue('rst_pin');
         var width = Blockly.Python.valueToCode(block, 'width', Blockly.Python.ORDER_ATOMIC);
         var high = Blockly.Python.valueToCode(block, 'high', Blockly.Python.ORDER_ATOMIC);
-        var r = Blockly.Python.valueToCode(block, 'rotation', Blockly.Python.ORDER_ATOMIC);
+        //var r = Blockly.Python.valueToCode(block, 'rotation', Blockly.Python.ORDER_ATOMIC);
         // TODO: Assemble Python into code variable.
-        var code = 'spi = SPI(2, baudrate=20000000, miso=Pin('+miso_pin+'.pin),mosi=Pin('+mosi_pin+'.pin), sck=Pin('+sck_pin+'.pin))\n'+ 'display = ILI9341(spi, cs=Pin('+cs_pin+'.pin), dc=Pin('+dc_pin+'.pin), rst=Pin('+rst_pin+'.pin), w='+width+', h='+high+', r='+r+')\n';
+        var code = 'spi = SPI(2, baudrate=20000000, miso=Pin('+miso_pin+'.pin),mosi=Pin('+mosi_pin+'.pin), sck=Pin('+sck_pin+'.pin))\n'+ 'display = ILI9341(spi, cs=Pin('+cs_pin+'.pin), dc=Pin('+dc_pin+'.pin), rst=Pin('+rst_pin+'.pin), w='+width+', h='+high+', r=0)\n';
         return code;
     };
 
