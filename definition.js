@@ -516,9 +516,9 @@ Blockly.Blocks['tft_lcd_create'] = {
         var sck_pin = block.getFieldValue('sck_pin');
         var cs_pin = block.getFieldValue('cs_pin');
         var dc_pin = block.getFieldValue('dc_pin');
-        var rst_pin = block.getFieldValue('rst_pin');
-        var width = Blockly.Python.valueToCode(block, 'width', Blockly.Python.ORDER_ATOMIC);
-        var high = Blockly.Python.valueToCode(block, 'high', Blockly.Python.ORDER_ATOMIC);
+        var rst_pin = block.getFieldValue('width');
+        var width = block.getFieldValue('width');
+        var high = block.getFieldValue('high');
         //var r = Blockly.Python.valueToCode(block, 'rotation', Blockly.Python.ORDER_ATOMIC);
         // TODO: Assemble Python into code variable.
         var code = 'spi = SPI(2, baudrate=20000000, miso=Pin('+miso_pin+'.pin),mosi=Pin('+mosi_pin+'.pin), sck=Pin('+sck_pin+'.pin))\n'+ 'display = ILI9341(spi, cs=Pin('+cs_pin+'.pin), dc=Pin('+dc_pin+'.pin), rst=Pin('+rst_pin+'.pin), w='+width+', h='+high+', r=0)\n';
@@ -552,7 +552,7 @@ Blockly.Blocks['tft_lcd_print'] = {
         this.jsonInit(
             {
                 "type": "tft_lcd_print",
-                "message0": "hiện lên TFT LCD %1%2 tại x %3%4 y %5%6",
+                "message0": "hiện chữ%1%2 tại x %3%4 y %5%6",
                 "args0": [
                   {
                     "type": "input_dummy",
@@ -601,7 +601,7 @@ Blockly.Blocks['tft_lcd_draw'] = {
         this.jsonInit(
             {
                 "type": "tft_lcd_draw",
-                "message0": "vẽ  %1 dài %3%2 rộng %5%4 tại x %7%6 y %9%8màu%11%10",
+                "message0": "vẽ hình %1 dài %3%2 rộng %5%4vị trí x %7%6 y %9%8màu%11%10",
                 "args0": [
                   {
                     "type": "field_dropdown",
@@ -612,12 +612,8 @@ Blockly.Blocks['tft_lcd_draw'] = {
                         "draw_rectangle"
                       ],
                       [
-                        "hình chữ nhật",
+                        "chữ nhật đặc",
                         "fill_rectangle"
-                      ],
-                      [
-                        "đa giác",
-                        "draw_polygon"
                       ],
                       [
                         "đường elip",
@@ -739,7 +735,7 @@ Blockly.Blocks['tft_lcd_draw_line'] = {
       this.jsonInit(
           {
               "type": "tft_lcd_draw_line",
-              "message0": "vẽ %1 rộng %3%2 tại x %5%4 y %7%6màu %9%8",
+              "message0": "vẽ %1dài%3%2vị tríx %5%4 y %7%6màu %9%8",
               "args0": [
                 {
                   "type": "field_dropdown",
@@ -820,7 +816,7 @@ Blockly.Blocks['tft_lcd_draw_text_pickcolor'] = {
       this.jsonInit(
           {
               "type": "tft_lcd_draw_text_pickcolor",
-              "message0": "hiện lên TFT LCD  %2%1 tại x %4%3 y %6%5 màu %8%7",
+              "message0": "hiện lên TFT LCD  %2%1vị trí x %4%3 y %6%5 màu %8%7",
               "args0": [
                 {
                   "type": "input_dummy",
