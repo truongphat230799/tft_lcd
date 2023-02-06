@@ -616,11 +616,11 @@ Blockly.Blocks['tft_lcd_draw'] = {
                         "fill_rectangle"
                       ],
                       [
-                        "đường elip",
+                        "elip rỗng",
                         "draw_ellipse"
                       ],
                       [
-                        "hình elip",
+                        " elip đặc",
                         "fill_ellipse"
                       ]
                     ]
