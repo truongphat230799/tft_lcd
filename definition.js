@@ -924,8 +924,8 @@ Blockly.Blocks['tft_lcd_draw_coord_line'] = {
 Blockly.Python['tft_lcd_draw_coord_line'] = function(block) {
   var x1 = Blockly.Python.valueToCode(block, 'w', Blockly.Python.ORDER_ATOMIC);
   var y1 = Blockly.Python.valueToCode(block, 'h', Blockly.Python.ORDER_ATOMIC);
-  var x = Blockly.Python.valueToCode(block, 'x', Blockly.Python.ORDER_ATOMIC);
-  var y = Blockly.Python.valueToCode(block, 'y', Blockly.Python.ORDER_ATOMIC);
+  var x2 = Blockly.Python.valueToCode(block, 'x', Blockly.Python.ORDER_ATOMIC);
+  var y2 = Blockly.Python.valueToCode(block, 'y', Blockly.Python.ORDER_ATOMIC);
   var value_color = Blockly.Python.valueToCode(block, 'COLOR', Blockly.Python.ORDER_ATOMIC);
   // TODO: Assemble Python into code variable.
   var code = 'display.' + shape+'('+x1+','+y1+','+x2+','+y2+', color565(0x'+value_color[[1],[2]]+value_color[[2],[3]]+',0x'+value_color[[3],[4]]+value_color[[4],[5]]+',0x'+value_color[[5],[6]]+value_color[[6],[7]]+'))\n';
