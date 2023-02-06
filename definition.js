@@ -873,11 +873,9 @@ Blockly.Blocks['tft_lcd_draw_coord_line'] = {
       this.jsonInit(
           {
               "type": "tft_lcd_draw_coord_line",
-              "message0": "vẽ đường thẳng vị trí x1 %2%1 y1 %4%3 x2 %6%5 y2 %8%7màu%10%9",
+              "message0": "vẽ đường thẳng vị trí x1 %2%1 y1 %4%3 x2 %6%5 y2 %8%7màu%9",
               "args0": [
-                {
-                  "type": "input_dummy",
-                },
+                
                 {
                   "type": "input_value",
                   "name": "x1",
