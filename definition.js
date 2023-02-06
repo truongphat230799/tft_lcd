@@ -3,7 +3,7 @@ Blockly.Blocks['tft_lcd_create'] = {
       this.jsonInit(
         {
             "type": "tft_lcd_create",
-            "message0": "khởi tạo LCD TFT chân MISO %1MOSI %13 %2SCK %14%3CS %15%4DC %16%5RST%6rộng %7 %8cao %9 %10 hướng %11%12",
+            "message0": "khởi tạo LCD TFT %13chân MISO%1%14MOSI%2%15SCK%3CS%4%16DC%5%17RST%6%18rộng%7%8%19cao %9 %10%20 hướng %11%12",
             "args0": [
               {
                 "type": "field_dropdown",
@@ -472,6 +472,18 @@ Blockly.Blocks['tft_lcd_create'] = {
                 "type": "input_value",
                 "name": "rotation",
                 "value": 0
+              },
+              {
+                "type": "input_dummy",
+              },
+              {
+                "type": "input_dummy",
+              },
+              {
+                "type": "input_dummy",
+              },
+              {
+                "type": "input_dummy",
               },
               {
                 "type": "input_dummy",
