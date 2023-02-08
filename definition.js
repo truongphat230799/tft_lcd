@@ -742,7 +742,7 @@ Blockly.Blocks['tft_lcd_draw_line'] = {
                   "name": "line",
                   "options": [
                     [
-                      "đường thẳng",
+                      "đường dọc",
                       "draw_vline"
                     ],
                     [
@@ -816,7 +816,7 @@ Blockly.Blocks['tft_lcd_draw_text_pickcolor'] = {
       this.jsonInit(
           {
               "type": "tft_lcd_draw_text_pickcolor",
-              "message0": "hiện lên TFT LCD  %2%1vị trí x %4%3 y %6%5 màu %8%7",
+              "message0": "hiện chữ  %2%1vị trí x %4%3 y %6%5 màu %8%7",
               "args0": [
                 {
                   "type": "input_dummy",
