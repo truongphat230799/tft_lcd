@@ -128,7 +128,7 @@ class ILI9341:
         270: 0x28
     }
 
-    def __init__(self, spi, cs, dc, rst, w, h, r):
+    def __init__(self, spi, cs, dc, rst, w, h):
         self.spi = spi
         self.cs = cs
         self.dc = dc
@@ -137,7 +137,6 @@ class ILI9341:
         self._init_height = h
         self.width = w
         self.height = h
-        self.rotation = r
         if implementation.name == 'circuitpython':
             self.cs.switch_to_output(value=True)
             self.dc.switch_to_output(value=False)
@@ -192,7 +191,9 @@ class ILI9341:
             (_VMCTRL1, b"\x3e\x28"),
             (_VMCTRL2, b"\x86")):
             self._write(command, data)
-
+            
+    def rotation(self,r):
+        self.rotation = r
         if self.rotation == 0:                  # 0 deg
             self._write(_MADCTL, b"\x48")
             self.width = self._init_height
