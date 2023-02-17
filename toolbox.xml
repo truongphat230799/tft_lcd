@@ -29,6 +29,7 @@
         </shadow>
       </value>
     </block>
+    <block type="tft_lcd_set_rotation"/>
     <block type="tft_lcd_font"/>
     <block type="tft_lcd_clear"/>
     <block type="tft_lcd_draw">

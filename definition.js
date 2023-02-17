@@ -931,3 +931,54 @@ Blockly.Python['tft_lcd_draw_coord_line'] = function(block) {
   var code = 'display.' + shape+'('+x1+','+y1+','+x2+','+y2+', color565(0x'+value_color[[1],[2]]+value_color[[2],[3]]+',0x'+value_color[[3],[4]]+value_color[[4],[5]]+',0x'+value_color[[5],[6]]+value_color[[6],[7]]+'))\n';
   return code;
 };
+
+Blockly.Blocks['tft_lcd_set_rotation'] = {
+  init: function () {
+      this.jsonInit(
+        {
+          "type": "tft_lcd_set_rotation",
+          "message0": "xoay màn hình góc %1",
+          "args0": [
+            {
+              "type": "field_dropdown",
+              "name": "rotation",
+              "options": [
+                [
+                  "0°",
+                  "0"
+                ],
+                [
+                  "90°",
+                  "1"
+                ],
+                [
+                  "180°",
+                  "2"
+                ],
+                [
+                  "270°",
+                  "3"
+                ],
+                [
+                  "360°",
+                  "4"
+                ]
+              ]
+            }
+          ],
+          "previousStatement": null,
+          "nextStatement": null,
+          "colour": "#370ACD",
+          "tooltip": "",
+          "helpUrl": ""
+        }
+      );
+  }
+};
+
+Blockly.Python['tft_lcd_set_rotation'] = function(block) {
+  var rotation = block.getFieldValue('rotation');
+  // TODO: Assemble Python into code variable.
+  var code = 'display.rotation('+rotation+')\n';
+  return code;
+};
