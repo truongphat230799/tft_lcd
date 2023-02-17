@@ -1,15 +1,10 @@
 Blockly.Blocks['tft_lcd_create'] = {
-    init: function () {
-      this.jsonInit(
-        {
+  init: function () {
+    this.jsonInit(
+      {
           "type": "tft_lcd_create",
-          "lastDummyAlign0": "RIGHT",
-          "message0": "khởi tạo LCD TFT chân %1 MISO %2 %3 MOSI %4 %5 SCK %6 %7 CS %8 %9 DC %10 %11 RST %12 %13 rộng %14 %15 cao %16",
+          "message0": "khởi tạo màn hình TFT chân MISO %1MOSI %2SCK %3CS %4DC %5RST %6rộng %7 %8cao %9 %10 hướng %11%12",
           "args0": [
-            {
-              "type": "input_dummy",
-              "align": "RIGHT"
-            },
             {
               "type": "field_dropdown",
               "name": "miso_pin",
@@ -17,10 +12,6 @@ Blockly.Blocks['tft_lcd_create'] = {
                 [
                   "P15",
                   "pin15"
-                ],
-                [
-                  "P0",
-                  "pin0"
                 ],
                 [
                   "P1",
@@ -79,14 +70,14 @@ Blockly.Blocks['tft_lcd_create'] = {
                   "pin14"
                 ],
                 [
+                  "P0",
+                  "pin0"
+                ],
+                [
                   "P16",
                   "pin16"
                 ]
               ]
-            },
-            {
-              "type": "input_dummy",
-              "align": "RIGHT"
             },
             {
               "type": "field_dropdown",
@@ -97,10 +88,6 @@ Blockly.Blocks['tft_lcd_create'] = {
                   "pin16"
                 ],
                 [
-                  "P0",
-                  "pin0"
-                ],
-                [
                   "P1",
                   "pin1"
                 ],
@@ -159,12 +146,12 @@ Blockly.Blocks['tft_lcd_create'] = {
                 [
                   "P15",
                   "pin15"
+                ],
+                [
+                  "P0",
+                  "pin0"
                 ]
               ]
-            },
-            {
-              "type": "input_dummy",
-              "align": "RIGHT"
             },
             {
               "type": "field_dropdown",
@@ -175,10 +162,6 @@ Blockly.Blocks['tft_lcd_create'] = {
                   "pin13"
                 ],
                 [
-                  "P0",
-                  "pin0"
-                ],
-                [
                   "P1",
                   "pin1"
                 ],
@@ -227,22 +210,22 @@ Blockly.Blocks['tft_lcd_create'] = {
                   "pin12"
                 ],
                 [
-                  "P15",
-                  "pin15"
+                  "P0",
+                  "pin0"
                 ],
                 [
                   "P14",
                   "pin14"
                 ],
                 [
+                  "P15",
+                  "pin15"
+                ],
+                [
                   "P16",
                   "pin16"
                 ]
               ]
-            },
-            {
-              "type": "input_dummy",
-              "align": "RIGHT"
             },
             {
               "type": "field_dropdown",
@@ -253,10 +236,6 @@ Blockly.Blocks['tft_lcd_create'] = {
                   "pin14"
                 ],
                 [
-                  "P0",
-                  "pin0"
-                ],
-                [
                   "P1",
                   "pin1"
                 ],
@@ -309,6 +288,10 @@ Blockly.Blocks['tft_lcd_create'] = {
                   "pin13"
                 ],
                 [
+                  "P0",
+                  "pin0"
+                ],
+                [
                   "P15",
                   "pin15"
                 ],
@@ -317,10 +300,6 @@ Blockly.Blocks['tft_lcd_create'] = {
                   "pin16"
                 ]
               ]
-            },
-            {
-              "type": "input_dummy",
-              "align": "RIGHT"
             },
             {
               "type": "field_dropdown",
@@ -331,10 +310,6 @@ Blockly.Blocks['tft_lcd_create'] = {
                   "pin10"
                 ],
                 [
-                  "P0",
-                  "pin0"
-                ],
-                [
                   "P1",
                   "pin1"
                 ],
@@ -371,8 +346,8 @@ Blockly.Blocks['tft_lcd_create'] = {
                   "pin9"
                 ],
                 [
-                  "P15",
-                  "pin15"
+                  "P0",
+                  "pin0"
                 ],
                 [
                   "P11",
@@ -391,14 +366,14 @@ Blockly.Blocks['tft_lcd_create'] = {
                   "pin14"
                 ],
                 [
+                  "P15",
+                  "pin15"
+                ],
+                [
                   "P16",
                   "pin16"
                 ]
               ]
-            },
-            {
-              "type": "input_dummy",
-              "align": "RIGHT"
             },
             {
               "type": "field_dropdown",
@@ -407,10 +382,6 @@ Blockly.Blocks['tft_lcd_create'] = {
                 [
                   "P12",
                   "pin12"
-                ],
-                [
-                  "P0",
-                  "pin0"
                 ],
                 [
                   "P1",
@@ -457,8 +428,8 @@ Blockly.Blocks['tft_lcd_create'] = {
                   "pin11"
                 ],
                 [
-                  "P15",
-                  "pin15"
+                  "P0",
+                  "pin0"
                 ],
                 [
                   "P13",
@@ -469,6 +440,10 @@ Blockly.Blocks['tft_lcd_create'] = {
                   "pin14"
                 ],
                 [
+                  "P15",
+                  "pin15"
+                ],
+                [
                   "P16",
                   "pin16"
                 ]
@@ -476,20 +451,26 @@ Blockly.Blocks['tft_lcd_create'] = {
             },
             {
               "type": "input_dummy",
-              "align": "RIGHT"
             },
             {
-              "type": "field_number",
+              "type": "input_value",
               "name": "width",
-              "value": 0
+              "value": 240
             },
             {
               "type": "input_dummy",
-              "align": "RIGHT"
             },
             {
-              "type": "field_number",
+              "type": "input_value",
               "name": "high",
+              "value": 320
+            },
+            {
+              "type": "input_dummy",
+            },
+            {
+              "type": "input_value",
+              "name": "rotation",
               "value": 0
             }
           ],
@@ -499,220 +480,38 @@ Blockly.Blocks['tft_lcd_create'] = {
           "tooltip": "",
           "helpUrl": ""
         }
-      );
-        }
-    };
+    );
+      }
+  };
 
-    Blockly.Python['tft_lcd_create'] = function(block) {
-        Blockly.Python.definitions_['import_yolobit'] = 'from yolobit import *';
-        Blockly.Python.definitions_['import_yolobit_tft_lcd'] = 'from tftlcd import ILI9341, color565';
-        Blockly.Python.definitions_['import_spi'] = 'from machine import Pin, SPI';
-        Blockly.Python.definitions_['import_font_glcd'] = 'import glcdfont';
-        Blockly.Python.definitions_['import_font_tt14'] = 'import tt14';
-        Blockly.Python.definitions_['import_font_tt24'] = 'import tt24';
-        Blockly.Python.definitions_['import_font_tt32'] = 'import tt32';
-        var miso_pin = block.getFieldValue('miso_pin');
-        var mosi_pin = block.getFieldValue('mosi_pin');
-        var sck_pin = block.getFieldValue('sck_pin');
-        var cs_pin = block.getFieldValue('cs_pin');
-        var dc_pin = block.getFieldValue('dc_pin');
-        var rst_pin = block.getFieldValue('rst_pin');
-        var width = block.getFieldValue('width');
-        var high = block.getFieldValue('high');
-        //var r = Blockly.Python.valueToCode(block, 'rotation', Blockly.Python.ORDER_ATOMIC);
-        // TODO: Assemble Python into code variable.
-        var code = 'spi = SPI(2, baudrate=20000000, miso=Pin('+miso_pin+'.pin),mosi=Pin('+mosi_pin+'.pin), sck=Pin('+sck_pin+'.pin))\n'+ 'display = ILI9341(spi, cs=Pin('+cs_pin+'.pin), dc=Pin('+dc_pin+'.pin), rst=Pin('+rst_pin+'.pin), w='+width+', h='+high+', r=0)\n';
-        return code;
-    };
+  Blockly.Python['tft_lcd_create'] = function(block) {
+      Blockly.Python.definitions_['import_yolobit'] = 'from yolobit import *';
+      Blockly.Python.definitions_['import_yolobit_tft_lcd'] = 'from tft_lcd import ILI9341, color565';
+      Blockly.Python.definitions_['import_spi'] = 'from machine import Pin, SPI';
+      Blockly.Python.definitions_['import_font_glcd'] = 'import glcdfont';
+      Blockly.Python.definitions_['import_font_tt14'] = 'import tt14';
+      Blockly.Python.definitions_['import_font_tt24'] = 'import tt24';
+      Blockly.Python.definitions_['import_font_tt32'] = 'import tt32';
+      var miso_pin = block.getFieldValue('miso_pin');
+      var mosi_pin = block.getFieldValue('mosi_pin');
+      var sck_pin = block.getFieldValue('sck_pin');
+      var cs_pin = block.getFieldValue('cs_pin');
+      var dc_pin = block.getFieldValue('dc_pin');
+      var rst_pin = block.getFieldValue('rst_pin');
+      var width = Blockly.Python.valueToCode(block, 'width', Blockly.Python.ORDER_ATOMIC);
+      var high = Blockly.Python.valueToCode(block, 'high', Blockly.Python.ORDER_ATOMIC);
+      var r = Blockly.Python.valueToCode(block, 'rotation', Blockly.Python.ORDER_ATOMIC);
+      // TODO: Assemble Python into code variable.
+      var code = 'spi = SPI(2, baudrate=20000000, miso=Pin('+miso_pin+'.pin),mosi=Pin('+mosi_pin+'.pin), sck=Pin('+sck_pin+'.pin))\n'+ 'display = ILI9341(spi, cs=Pin('+cs_pin+'.pin), dc=Pin('+dc_pin+'.pin), rst=Pin('+rst_pin+'.pin), w='+width+', h='+high+', r='+r+')\n';
+      return code;
+  };
 
 Blockly.Blocks['tft_lcd_clear'] = {
-    init: function () {
-        this.jsonInit(
-            {
-                "type": "tft_lcd_clear",
-                "message0": "xóa màn hình TFT",
-                "previousStatement": null,
-                "nextStatement": null,
-                "colour": "#370ACD",
-                "tooltip": "",
-                "helpUrl": ""
-              }
-        );
-        }
-    };
-
-Blockly.Python['tft_lcd_clear'] = function(block) {
-    // TODO: Assemble Python into code variable.
-    var code = 'display.clear()\n';
-    return code;
-};
-
-Blockly.Blocks['tft_lcd_print'] = {
-    init: function () {
-        this.jsonInit(
-            {
-                "type": "tft_lcd_print",
-                "message0": "hiện chữ%1%2 vị trí x %3%4 y %5%6",
-                "args0": [
-                  {
-                    "type": "input_dummy",
-                  },
-                  {
-                    "type": "input_value",
-                    "name": "text",
-                    "text": "thông tin"
-                  },
-                  {
-                    "type": "input_dummy",
-                  },
-                  {
-                    "type": "input_value",
-                    "name": "x",
-                    "value": 0
-                  },
-                  {
-                    "type": "input_dummy",
-                  },
-                  {
-                    "type": "input_value",
-                    "name": "y",
-                    "value": 0
-                  }
-                ],
-                "previousStatement": null,
-                "nextStatement": null,
-                "colour": "#370ACD",
-                "tooltip": "",
-                "helpUrl": ""
-              }
-        );
-            }
-};
-Blockly.Python['tft_lcd_print'] = function(block) {
-    var text = Blockly.Python.valueToCode(block, 'text', Blockly.Python.ORDER_ATOMIC);
-    var x = Blockly.Python.valueToCode(block, 'x', Blockly.Python.ORDER_ATOMIC);
-    var y = Blockly.Python.valueToCode(block, 'y', Blockly.Python.ORDER_ATOMIC);
-    // TODO: Assemble Python into code variable.
-    var code = 'display.set_pos('+x+','+y+')\n' + 'display.print('+text+')\n';
-    return code;
-};
-Blockly.Blocks['tft_lcd_draw'] = {
-    init: function () {
-        this.jsonInit(
-            {
-                "type": "tft_lcd_draw",
-                "message0": "vẽ hình %1 dài %3%2 rộng %5%4vị trí x %7%6 y %9%8màu%11%10",
-                "args0": [
-                  {
-                    "type": "field_dropdown",
-                    "name": "shape",
-                    "options": [
-                      [
-                        "chữ nhật rỗng",
-                        "draw_rectangle"
-                      ],
-                      [
-                        "chữ nhật đặc",
-                        "fill_rectangle"
-                      ],
-                      [
-                        "elip rỗng",
-                        "draw_ellipse"
-                      ],
-                      [
-                        " elip đặc",
-                        "fill_ellipse"
-                      ]
-                    ]
-                  },
-                  {
-                    "type": "input_dummy",
-                  },
-                  {
-                    "type": "input_value",
-                    "name": "w",
-                    "value": 0
-                  },
-                  {
-                    "type": "input_dummy",
-                  },
-                  {
-                    "type": "input_value",
-                    "name": "h",
-                    "value": 0
-                  },
-                  {
-                    "type": "input_dummy",
-                  },
-                  {
-                    "type": "input_value",
-                    "name": "x",
-                    "value": 0
-                  },
-                  {
-                    "type": "input_dummy",
-                  },
-                  {
-                    "type": "input_value",
-                    "name": "y",
-                    "value": 0
-                  },
-                  {
-                    "type": "input_dummy",
-                  },
-                  { "type": "input_value", 
-                    "name": "COLOR" 
-                  }
-                ],
-                "previousStatement": null,
-                "nextStatement": null,
-                "colour": "#370ACD",
-                "tooltip": "",
-                "helpUrl": ""
-              }
-        );
-            }
-};
-Blockly.Python['tft_lcd_draw'] = function(block) {
-    var w = Blockly.Python.valueToCode(block, 'w', Blockly.Python.ORDER_ATOMIC);
-    var h = Blockly.Python.valueToCode(block, 'h', Blockly.Python.ORDER_ATOMIC);
-    var shape = block.getFieldValue('shape');
-    var x = Blockly.Python.valueToCode(block, 'x', Blockly.Python.ORDER_ATOMIC);
-    var y = Blockly.Python.valueToCode(block, 'y', Blockly.Python.ORDER_ATOMIC);
-    var value_color = Blockly.Python.valueToCode(block, 'COLOR', Blockly.Python.ORDER_ATOMIC);
-    // TODO: Assemble Python into code variable.
-    var code = 'display.' + shape+'('+x+','+y+','+w+','+h+', color565(0x'+value_color[[1],[2]]+value_color[[2],[3]]+',0x'+value_color[[3],[4]]+value_color[[4],[5]]+',0x'+value_color[[5],[6]]+value_color[[6],[7]]+'))\n';
-    return code;
-};
-Blockly.Blocks['tft_lcd_font'] = {
   init: function () {
       this.jsonInit(
           {
-              "type": "tft_lcd_font",
-              "message0": "chọn font chữ %1",
-              "args0": [
-                {
-                  "type": "field_dropdown",
-                  "name": "font",
-                  "options": [
-                    [
-                      "minimum",
-                      "glcdfont"
-                    ],
-                    [
-                      "cỡ 14",
-                      "tt14"
-                    ],
-                    [
-                      "cỡ 24",
-                      "tt24"
-                    ],
-                    [
-                      "cỡ 32",
-                      "tt32"
-                    ]
-                  ]
-                }],
+              "type": "tft_lcd_clear",
+              "message0": "xóa màn hình",
               "previousStatement": null,
               "nextStatement": null,
               "colour": "#370ACD",
@@ -723,104 +522,22 @@ Blockly.Blocks['tft_lcd_font'] = {
       }
   };
 
-Blockly.Python['tft_lcd_font'] = function(block) {
-  var font = block.getFieldValue('font');
+Blockly.Python['tft_lcd_clear'] = function(block) {
   // TODO: Assemble Python into code variable.
-  var code = 'display.set_font('+font+')\n';
+  var code = 'display.clear()\n';
   return code;
 };
 
-Blockly.Blocks['tft_lcd_draw_line'] = {
+Blockly.Blocks['tft_lcd_print'] = {
   init: function () {
       this.jsonInit(
           {
-              "type": "tft_lcd_draw_line",
-              "message0": "vẽ %1dài%3%2vị trí x%5%4 y %7%6màu %9%8",
-              "args0": [
-                {
-                  "type": "field_dropdown",
-                  "name": "line",
-                  "options": [
-                    [
-                      "đường dọc",
-                      "draw_vline"
-                    ],
-                    [
-                      "đường ngang",
-                      "draw_hline"
-                    ],
-                    [
-                      "hình tròn",
-                      "fill_circle"
-                    ],
-                    [
-                      "đường tròn",
-                      "draw_circle"
-                    ]
-                  ]
-                },
-                {
-                  "type": "input_dummy",
-                },
-                {
-                  "type": "input_value",
-                  "name": "w",
-                  "value": 0
-                },
-                {
-                  "type": "input_dummy",
-                },
-                {
-                  "type": "input_value",
-                  "name": "x",
-                  "value": 0
-                },
-                {
-                  "type": "input_dummy",
-                },
-                {
-                  "type": "input_value",
-                  "name": "y",
-                  "value": 0
-                },
-                {
-                  "type": "input_dummy",
-                },
-                { "type": "input_value", 
-                "name": "COLOR" 
-                }
-              ],
-              "previousStatement": null,
-              "nextStatement": null,
-              "colour": "#370ACD",
-              "tooltip": "",
-              "helpUrl": ""
-            }
-      );
-          }
-};
-
-Blockly.Python['tft_lcd_draw_line'] = function(block) {
-  var w = Blockly.Python.valueToCode(block, 'w', Blockly.Python.ORDER_ATOMIC);
-  var line = block.getFieldValue('line');
-  var x = Blockly.Python.valueToCode(block, 'x', Blockly.Python.ORDER_ATOMIC);
-  var y = Blockly.Python.valueToCode(block, 'y', Blockly.Python.ORDER_ATOMIC);
-  var value_color = Blockly.Python.valueToCode(block, 'COLOR', Blockly.Python.ORDER_ATOMIC);
-  // TODO: Assemble Python into code variable.
-  var code = 'display.' + line+'('+x+','+y+','+w+', color565(0x'+value_color[[1],[2]]+value_color[[2],[3]]+',0x'+value_color[[3],[4]]+value_color[[4],[5]]+',0x'+value_color[[5],[6]]+value_color[[6],[7]]+'))\n';
-  return code;
-};
-
-Blockly.Blocks['tft_lcd_draw_text_pickcolor'] = {
-  init: function () {
-      this.jsonInit(
-          {
-              "type": "tft_lcd_draw_text_pickcolor",
-              "message0": "hiện chữ  %2%1vị trí x %4%3 y %6%5 màu %8%7",
+              "type": "tft_lcd_print",
+              "message0": "hiện chữ %1%2 tại x %3%4 y %5%6",
               "args0": [
                 {
                   "type": "input_dummy",
-                }, 
+                },
                 {
                   "type": "input_value",
                   "name": "text",
@@ -841,12 +558,6 @@ Blockly.Blocks['tft_lcd_draw_text_pickcolor'] = {
                   "type": "input_value",
                   "name": "y",
                   "value": 0
-                },
-                {
-                  "type": "input_dummy",
-                },
-                { "type": "input_value", 
-                "name": "COLOR" 
                 }
               ],
               "previousStatement": null,
@@ -858,27 +569,53 @@ Blockly.Blocks['tft_lcd_draw_text_pickcolor'] = {
       );
           }
 };
-
-Blockly.Python['tft_lcd_draw_text_pickcolor'] = function(block) {
+Blockly.Python['tft_lcd_print'] = function(block) {
   var text = Blockly.Python.valueToCode(block, 'text', Blockly.Python.ORDER_ATOMIC);
   var x = Blockly.Python.valueToCode(block, 'x', Blockly.Python.ORDER_ATOMIC);
   var y = Blockly.Python.valueToCode(block, 'y', Blockly.Python.ORDER_ATOMIC);
-  var value_color = Blockly.Python.valueToCode(block, 'COLOR', Blockly.Python.ORDER_ATOMIC);
   // TODO: Assemble Python into code variable.
-  var code = 'display.draw_text8x8('+x+','+y+','+text+', color565(0x'+value_color[[1],[2]]+value_color[[2],[3]]+',0x'+value_color[[3],[4]]+value_color[[4],[5]]+',0x'+value_color[[5],[6]]+value_color[[6],[7]]+'))\n';
+  var code = 'display.set_pos('+x+','+y+')\n' + 'display.print('+text+')\n';
   return code;
 };
-Blockly.Blocks['tft_lcd_draw_coord_line'] = {
+Blockly.Blocks['tft_lcd_draw'] = {
   init: function () {
       this.jsonInit(
           {
-              "type": "tft_lcd_draw_coord_line",
-              "message0": "vẽ đường thẳng vị trí x1 %2%1 y1 %4%3 x2 %6%5 y2 %8%7màu%9",
+              "type": "tft_lcd_draw",
+              "message0": "vẽ  %1 dài %3%2 rộng %5%4 tại x %7%6 y %9%8màu%11%10",
               "args0": [
-                
+                {
+                  "type": "field_dropdown",
+                  "name": "shape",
+                  "options": [
+                    [
+                      "chữ nhật rỗng",
+                      "draw_rectangle"
+                    ],
+                    [
+                      "hình chữ nhật",
+                      "fill_rectangle"
+                    ],
+                    [
+                      "đa giác",
+                      "draw_polygon"
+                    ],
+                    [
+                      "đường elip",
+                      "draw_ellipse"
+                    ],
+                    [
+                      "hình elip",
+                      "fill_ellipse"
+                    ]
+                  ]
+                },
+                {
+                  "type": "input_dummy",
+                },
                 {
                   "type": "input_value",
-                  "name": "x1",
+                  "name": "w",
                   "value": 0
                 },
                 {
@@ -886,7 +623,7 @@ Blockly.Blocks['tft_lcd_draw_coord_line'] = {
                 },
                 {
                   "type": "input_value",
-                  "name": "y1",
+                  "name": "h",
                   "value": 0
                 },
                 {
@@ -894,7 +631,7 @@ Blockly.Blocks['tft_lcd_draw_coord_line'] = {
                 },
                 {
                   "type": "input_value",
-                  "name": "x2",
+                  "name": "x",
                   "value": 0
                 },
                 {
@@ -902,7 +639,7 @@ Blockly.Blocks['tft_lcd_draw_coord_line'] = {
                 },
                 {
                   "type": "input_value",
-                  "name": "y2",
+                  "name": "y",
                   "value": 0
                 },
                 {
@@ -921,13 +658,249 @@ Blockly.Blocks['tft_lcd_draw_coord_line'] = {
       );
           }
 };
-Blockly.Python['tft_lcd_draw_coord_line'] = function(block) {
-  var x1 = Blockly.Python.valueToCode(block, 'w', Blockly.Python.ORDER_ATOMIC);
-  var y1 = Blockly.Python.valueToCode(block, 'h', Blockly.Python.ORDER_ATOMIC);
-  var x2 = Blockly.Python.valueToCode(block, 'x', Blockly.Python.ORDER_ATOMIC);
-  var y2 = Blockly.Python.valueToCode(block, 'y', Blockly.Python.ORDER_ATOMIC);
+Blockly.Python['tft_lcd_draw'] = function(block) {
+  var w = Blockly.Python.valueToCode(block, 'w', Blockly.Python.ORDER_ATOMIC);
+  var h = Blockly.Python.valueToCode(block, 'h', Blockly.Python.ORDER_ATOMIC);
+  var shape = block.getFieldValue('shape');
+  var x = Blockly.Python.valueToCode(block, 'x', Blockly.Python.ORDER_ATOMIC);
+  var y = Blockly.Python.valueToCode(block, 'y', Blockly.Python.ORDER_ATOMIC);
   var value_color = Blockly.Python.valueToCode(block, 'COLOR', Blockly.Python.ORDER_ATOMIC);
   // TODO: Assemble Python into code variable.
-  var code = 'display.' + shape+'('+x1+','+y1+','+x2+','+y2+', color565(0x'+value_color[[1],[2]]+value_color[[2],[3]]+',0x'+value_color[[3],[4]]+value_color[[4],[5]]+',0x'+value_color[[5],[6]]+value_color[[6],[7]]+'))\n';
+  var code = 'display.' + shape+'('+x+','+y+','+w+','+h+', color565(0x'+value_color[[1],[2]]+value_color[[2],[3]]+',0x'+value_color[[3],[4]]+value_color[[4],[5]]+',0x'+value_color[[5],[6]]+value_color[[6],[7]]+'))\n';
   return code;
 };
+Blockly.Blocks['tft_lcd_font'] = {
+init: function () {
+    this.jsonInit(
+        {
+            "type": "tft_lcd_font",
+            "message0": "chọn font chữ %1",
+            "args0": [
+              {
+                "type": "field_dropdown",
+                "name": "font",
+                "options": [
+                  [
+                    "minimum",
+                    "glcdfont"
+                  ],
+                  [
+                    "cỡ 14",
+                    "tt14"
+                  ],
+                  [
+                    "cỡ 24",
+                    "tt24"
+                  ],
+                  [
+                    "cỡ 32",
+                    "tt32"
+                  ]
+                ]
+              }],
+            "previousStatement": null,
+            "nextStatement": null,
+            "colour": "#370ACD",
+            "tooltip": "",
+            "helpUrl": ""
+          }
+    );
+    }
+};
+
+Blockly.Python['tft_lcd_font'] = function(block) {
+var font = block.getFieldValue('font');
+// TODO: Assemble Python into code variable.
+var code = 'display.set_font('+font+')\n';
+return code;
+};
+
+Blockly.Blocks['tft_lcd_draw_line'] = {
+init: function () {
+    this.jsonInit(
+        {
+            "type": "tft_lcd_draw_line",
+            "message0": "vẽ %1 rộng %3%2 tại x %5%4 y %7%6màu %9%8",
+            "args0": [
+              {
+                "type": "field_dropdown",
+                "name": "line",
+                "options": [
+                  [
+                    "đường thẳng",
+                    "draw_vline"
+                  ],
+                  [
+                    "đường ngang",
+                    "draw_hline"
+                  ],
+                  [
+                    "hình tròn",
+                    "fill_circle"
+                  ],
+                  [
+                    "đường tròn",
+                    "draw_circle"
+                  ]
+                ]
+              },
+              {
+                "type": "input_dummy",
+              },
+              {
+                "type": "input_value",
+                "name": "w",
+                "value": 0
+              },
+              {
+                "type": "input_dummy",
+              },
+              {
+                "type": "input_value",
+                "name": "x",
+                "value": 0
+              },
+              {
+                "type": "input_dummy",
+              },
+              {
+                "type": "input_value",
+                "name": "y",
+                "value": 0
+              },
+              {
+                "type": "input_dummy",
+              },
+              { "type": "input_value", 
+              "name": "COLOR" 
+              }
+            ],
+            "previousStatement": null,
+            "nextStatement": null,
+            "colour": "#370ACD",
+            "tooltip": "",
+            "helpUrl": ""
+          }
+    );
+        }
+};
+
+Blockly.Python['tft_lcd_draw_line'] = function(block) {
+var w = Blockly.Python.valueToCode(block, 'w', Blockly.Python.ORDER_ATOMIC);
+var line = block.getFieldValue('line');
+var x = Blockly.Python.valueToCode(block, 'x', Blockly.Python.ORDER_ATOMIC);
+var y = Blockly.Python.valueToCode(block, 'y', Blockly.Python.ORDER_ATOMIC);
+var value_color = Blockly.Python.valueToCode(block, 'COLOR', Blockly.Python.ORDER_ATOMIC);
+// TODO: Assemble Python into code variable.
+var code = 'display.' + line+'('+x+','+y+','+w+', color565(0x'+value_color[[1],[2]]+value_color[[2],[3]]+',0x'+value_color[[3],[4]]+value_color[[4],[5]]+',0x'+value_color[[5],[6]]+value_color[[6],[7]]+'))\n';
+return code;
+};
+
+Blockly.Blocks['tft_lcd_draw_text_pickcolor'] = {
+init: function () {
+    this.jsonInit(
+        {
+            "type": "tft_lcd_draw_text_pickcolor",
+            "message0": "hiện lên TFT LCD  %2%1 tại x %4%3 y %6%5 màu %8%7",
+            "args0": [
+              {
+                "type": "input_dummy",
+              }, 
+              {
+                "type": "input_value",
+                "name": "text",
+                "text": "thông tin"
+              },
+              {
+                "type": "input_dummy",
+              },
+              {
+                "type": "input_value",
+                "name": "x",
+                "value": 0
+              },
+              {
+                "type": "input_dummy",
+              },
+              {
+                "type": "input_value",
+                "name": "y",
+                "value": 0
+              },
+              {
+                "type": "input_dummy",
+              },
+              { "type": "input_value", 
+              "name": "COLOR" 
+              }
+            ],
+            "previousStatement": null,
+            "nextStatement": null,
+            "colour": "#370ACD",
+            "tooltip": "",
+            "helpUrl": ""
+          }
+    );
+        }
+};
+
+Blockly.Python['tft_lcd_draw_text_pickcolor'] = function(block) {
+var text = Blockly.Python.valueToCode(block, 'text', Blockly.Python.ORDER_ATOMIC);
+var x = Blockly.Python.valueToCode(block, 'x', Blockly.Python.ORDER_ATOMIC);
+var y = Blockly.Python.valueToCode(block, 'y', Blockly.Python.ORDER_ATOMIC);
+var value_color = Blockly.Python.valueToCode(block, 'COLOR', Blockly.Python.ORDER_ATOMIC);
+// TODO: Assemble Python into code variable.
+var code = 'display.draw_text8x8('+x+','+y+','+text+', color565(0x'+value_color[[1],[2]]+value_color[[2],[3]]+',0x'+value_color[[3],[4]]+value_color[[4],[5]]+',0x'+value_color[[5],[6]]+value_color[[6],[7]]+'))\n';
+return code;
+};
+Blockly.Blocks['tft_lcd_set_rotation'] = {
+  init: function () {
+      this.jsonInit(
+        {
+          "type": "tft_lcd_set_rotation",
+          "message0": "xoay màn hình góc %1",
+          "args0": [
+            {
+              "type": "field_dropdown",
+              "name": "rotation",
+              "options": [
+                [
+                  "0°",
+                  "0"
+                ],
+                [
+                  "90°",
+                  "1"
+                ],
+                [
+                  "180°",
+                  "2"
+                ],
+                [
+                  "270°",
+                  "3"
+                ],
+                [
+                  "360°",
+                  "4"
+                ]
+              ]
+            }
+          ],
+          "previousStatement": null,
+          "nextStatement": null,
+          "colour": "#370ACD",
+          "tooltip": "",
+          "helpUrl": ""
+        }
+      );
+  }
+};
+
+Blockly.Python['tft_lcd_set_rotation'] = function(block) {
+  var rotation = block.getFieldValue('rotation');
+  // TODO: Assemble Python into code variable.
+  var code = 'display.rotation('+rotation+')\n';
+  return code;
+};
+
